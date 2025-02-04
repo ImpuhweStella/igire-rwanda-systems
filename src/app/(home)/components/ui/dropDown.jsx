@@ -13,8 +13,8 @@ import {
 const programsData = {
   links: [
     { label: "All Programs", href: "/programs" },
-    { label: "SheCanCode", href: "/programs/shecancode" },
-    { label: "AWE", href: "/programs/awe" },
+    { label: "SheCanCode", href: "/programs/Shecancode-program" },
+    { label: "AWE", href: "/programs/Awe-program" },
   ],
 };
 
@@ -24,7 +24,7 @@ export default function DropDown() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="text-lg font-normal hover:text-orange-500 transition-all">
-        programs
+        Programs
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-12">
         {programsData.links.map(({ label, href }, index) => (

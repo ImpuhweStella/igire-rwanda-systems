@@ -19,13 +19,16 @@ export default function Hubs() {
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
         <div className="relative w-full flex justify-between items-start px-8 mt-60">
-          <h1 className="z-10 text-4xl font-bold text-left mt-36 ml-20 ">
-            Hanga Hubs
-          </h1>
-           {/* Status Card (White) */}
-           <div className="absolute left-[20%] top-[20%] z-10 bg-white text-gray-800 rounded-lg shadow-md p-6 w-fit">
-            <p className="font-medium mb-2">Status</p>
-            <p className="mb-4">Ongoing</p>
+          <div className="ml-20 flex flex-col">
+            <h1 className="z-10 text-4xl font-bold text-left mb-12">
+              Hanga Hubs
+            </h1>
+
+            {/* White Card */}
+            <div className="absolute left-[7%] top-[150px] z-10 bg-white text-gray-800 rounded-lg shadow-md p-6 w-[200px] ">
+              <p className="font-medium mb-2">Status</p>
+              <p className="mb-4">Ongoing</p>
+            </div>
           </div>
 
           {/* Blue Card Overlay */}
@@ -47,7 +50,7 @@ export default function Hubs() {
       </div>
 
       {/* Main Content Section (Below Image) */}
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8 mt-24">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
           {/* Left Side Content */}
           <div className="md:col-span-2">
@@ -92,6 +95,61 @@ export default function Hubs() {
                 <p className="mb-2"><strong>Candidates:</strong> Open to teams that completed the pre-incubation stage and whose solution is close to market entry.</p>
               </div>
             </section>
+            {/* Our Partners Section (Below the Grid) */}
+            <section className="mt-16">
+              <h2 className="text-2xl font-bold mb-4">Our Partners</h2>
+              <div className="flex flex-wrap justify-center gap-8"> {/* Container for images */}
+                <div className="w-32 h-32 relative"> {/* Adjust size as needed */}
+                  <Image
+                    src="/mastercard-logo.png" // Replace with your image path
+                    alt="Partner 1"
+                    layout="fill"
+                    objectFit="contain" // Or "cover" as needed
+                  />
+                </div>
+                <div className="w-32 h-32 relative">
+                  <Image
+                    src="/UN-Women-logo-blue-en.svg" // Replace with your image path
+                    alt="Partner 2"
+                    layout="fill"
+                    objectFit="contain"
+                  />
+                </div>
+                {/* Add more image divs as needed */}
+                <div className="w-32 h-32 relative">
+                  <Image
+                    src="/dot-rwanda-logo.svg" // Example with SVG
+                    alt="Partner 3"
+                    layout="fill"
+                    objectFit="contain"
+                  />
+                </div>
+                <div className="w-32 h-32 relative">
+                  <Image
+                    src="/KLab-Logo.jpg" // Example with SVG
+                    alt="Partner 4"
+                    layout="fill"
+                    objectFit="contain"
+                  />
+                </div>
+                <div className="w-32 h-32 relative">
+                  <Image
+                    src="/umurava2.png" // Example with SVG
+                    alt="Partner 4"
+                    layout="fill"
+                    objectFit="contain"
+                  />
+                </div>
+                <div className="w-32 h-32 relative">
+                  <Image
+                    src="/intango-tss-logo.png" // Example with SVG
+                    alt="Partner 4"
+                    layout="fill"
+                    objectFit="contain"
+                  />
+                </div>
+              </div>
+            </section>
 
             {/* Visit Website Button */}
             <div className="mt-6">
@@ -103,10 +161,17 @@ export default function Hubs() {
               >
                 Visit Website
               </Link>
-            </div>
+              <Link
+                href="/application" // Replace with your application page route
+                className="inline-block ml-[10%] bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-blue-700 transition"
+              >
+                Apply Now
+              </Link>
+            
           </div>
         </div>
       </div>
     </div>
+    </div >
   );
 }

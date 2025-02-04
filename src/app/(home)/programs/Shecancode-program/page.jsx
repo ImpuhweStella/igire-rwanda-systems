@@ -2,8 +2,24 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useRef } from 'react';
 
 export default function Hubs() {
+  const partnersRef = useRef(null);
+
+  useEffect(() => {
+    const scrollInterval = setInterval(() => {
+      if (partnersRef.current) {
+        partnersRef.current.scrollLeft += 2; // Adjust scroll speed (2 pixels)
+        if (partnersRef.current.scrollLeft >= partnersRef.current.scrollWidth - partnersRef.current.offsetWidth) {
+            partnersRef.current.scrollLeft = 0; // Reset scroll to the beginning
+        }
+      }
+    }, 30); // Adjust interval for scroll smoothness
+
+    return () => clearInterval(scrollInterval); // Clean up on unmount
+  }, []);
+
   return (
     <div className="font-sans">
       {/* Background Section */}
@@ -33,10 +49,10 @@ export default function Hubs() {
 
           <div className="absolute left-[65%] top-[5%] z-10 bg-blue-600 text-white rounded-sm shadow-md p-6 w-fit">
             <p className="font-medium mb-2">Contact Person</p>
-            <p className="mb-4">Said R. Ngoga</p>
+            <p className="mb-4">Lidia Solomon</p>
 
             <p className="font-medium mb-2">Position</p>
-            <p className="mb-4">Technology Innovation Division Manager</p>
+            <p className="mb-4">Program Manager</p>
 
             <p className="font-medium mb-2">Email</p>
             <p className="mb-4">saidngoga.rutabayiro@risa.gov.rw</p>
@@ -109,9 +125,60 @@ export default function Hubs() {
 
         {/* Our Partners Section (Below the Grid) */}
         <section className="mt-16">
-          <h2 className="text-2xl font-bold mb-4">Our Partners</h2>
-          {/* ... (Our Partners content) */}
-        </section>
+        <h2 className="text-2xl font-bold mb-4">Our Partners</h2>
+        <div className="flex flex-wrap justify-center gap-8"> {/* Container for images */}
+          <div className="w-32 h-32 relative"> {/* Adjust size as needed */}
+            <Image
+              src="/mastercard-logo.png" // Replace with your image path
+              alt="Partner 1"
+              layout="fill"
+              objectFit="contain" // Or "cover" as needed
+            />
+          </div>
+          <div className="w-32 h-32 relative">
+            <Image
+              src="/UN-Women-logo-blue-en.svg" // Replace with your image path
+              alt="Partner 2"
+              layout="fill"
+              objectFit="contain"
+            />
+          </div>
+          {/* Add more image divs as needed */}
+          <div className="w-32 h-32 relative">
+            <Image
+              src="/dot-rwanda-logo.svg" // Example with SVG
+              alt="Partner 3"
+              layout="fill"
+              objectFit="contain"
+            />
+          </div>
+           <div className="w-32 h-32 relative">
+            <Image
+              src="/KLab-Logo.jpg" // Example with SVG
+              alt="Partner 4"
+              layout="fill"
+              objectFit="contain"
+            />
+          </div>
+          <div className="w-32 h-32 relative">
+            <Image
+              src="/umurava2.png" // Example with SVG
+              alt="Partner 4"
+              layout="fill"
+              objectFit="contain"
+            />
+          </div>
+          <div className="w-32 h-32 relative">
+            <Image
+              src="/intango-tss-logo.png" // Example with SVG
+              alt="Partner 4"
+              layout="fill"
+              objectFit="contain"
+            />
+          </div>
+        </div>
+      </section>
+
 
         {/* Visit Website Button (Below Our Partners) */}
         <div className="mt-6">
