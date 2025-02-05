@@ -96,63 +96,33 @@ export default function Hubs() {
               </div>
             </section>
             {/* Our Partners Section (Below the Grid) */}
+            {/* Our Partners Section (Below the Grid) */}
             <section className="mt-16">
-              <h2 className="text-2xl font-bold mb-4">Our Partners</h2>
-              <div className="flex flex-wrap justify-center gap-8"> {/* Container for images */}
-                <div className="w-32 h-32 relative"> {/* Adjust size as needed */}
-                  <Image
-                    src="/mastercard-logo.png" // Replace with your image path
-                    alt="Partner 1"
-                    layout="fill"
-                    objectFit="contain" // Or "cover" as needed
-                  />
+              <h2 className="text-2xl font-bold mb-4 text-center">Our Partners</h2>
+              <div className="flex justify-center gap-x-16 overflow-hidden">
+                <div className="w-24 h-24 relative">
+                  <Image src="/mastercard-logo.png" alt="Partner 1" layout="fill" objectFit="contain" />
                 </div>
-                <div className="w-32 h-32 relative">
-                  <Image
-                    src="/UN-Women-logo-blue-en.svg" // Replace with your image path
-                    alt="Partner 2"
-                    layout="fill"
-                    objectFit="contain"
-                  />
+                <div className="w-24 h-24 relative">
+                  <Image src="/UN-Women-logo-blue-en.svg" alt="Partner 2" layout="fill" objectFit="contain" />
                 </div>
-                {/* Add more image divs as needed */}
-                <div className="w-32 h-32 relative">
-                  <Image
-                    src="/dot-rwanda-logo.svg" // Example with SVG
-                    alt="Partner 3"
-                    layout="fill"
-                    objectFit="contain"
-                  />
+                <div className="w-24 h-24 relative">
+                  <Image src="/dot-rwanda-logo.svg" alt="Partner 3" layout="fill" objectFit="contain" />
                 </div>
-                <div className="w-32 h-32 relative">
-                  <Image
-                    src="/KLab-Logo.jpg" // Example with SVG
-                    alt="Partner 4"
-                    layout="fill"
-                    objectFit="contain"
-                  />
+                <div className="w-24 h-24 relative">
+                  <Image src="/KLab-Logo.jpg" alt="Partner 4" layout="fill" objectFit="contain" />
                 </div>
-                <div className="w-32 h-32 relative">
-                  <Image
-                    src="/umurava2.png" // Example with SVG
-                    alt="Partner 4"
-                    layout="fill"
-                    objectFit="contain"
-                  />
+                <div className="w-24 h-24 relative">
+                  <Image src="/umurava2.png" alt="Partner 5" layout="fill" objectFit="contain" />
                 </div>
-                <div className="w-32 h-32 relative">
-                  <Image
-                    src="/intango-tss-logo.png" // Example with SVG
-                    alt="Partner 4"
-                    layout="fill"
-                    objectFit="contain"
-                  />
+                <div className="w-24 h-24 relative">
+                  <Image src="/intango-tss-logo.png" alt="Partner 6" layout="fill" objectFit="contain" />
                 </div>
               </div>
             </section>
 
             {/* Visit Website Button */}
-            <div className="mt-6">
+            <div className="mt-8">
               <Link
                 href="https://awe-rwanda.netlify.app/"
                 target="_blank"
@@ -162,16 +132,16 @@ export default function Hubs() {
                 Visit Website
               </Link>
               <Link
-                href="/application" // Replace with your application page route
+                href="/awe-Application" 
                 className="inline-block ml-[10%] bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-blue-700 transition"
               >
                 Apply Now
               </Link>
-            
+            </div>
+
           </div>
         </div>
       </div>
-    </div>
     </div >
   );
 }
